@@ -8,7 +8,7 @@ const LoginSignup = props => {
     <Container>
       <Invaders>
         {[...Array(40)].map(i => (
-          <InvaderWrapper>
+          <InvaderWrapper key={i}>
             <SpaceInvader />
           </InvaderWrapper>
         ))}
