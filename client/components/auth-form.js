@@ -3,6 +3,9 @@ import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
 import {auth} from '../store'
 
+import styled from 'styled-components'
+import Button from '../theme/Button'
+
 /**
  * COMPONENT
  */
@@ -14,22 +17,24 @@ const AuthForm = props => {
       <form onSubmit={handleSubmit} name={name}>
         <div>
           <label htmlFor="email">
-            <small>Email</small>
+            <small>EMAIL</small>
           </label>
           <input name="email" type="text" />
         </div>
         <div>
           <label htmlFor="password">
-            <small>Password</small>
+            <small>PASSWORD</small>
           </label>
           <input name="password" type="password" />
         </div>
-        <div>
-          <button type="submit">{displayName}</button>
-        </div>
+        <ButtonContainer>
+          <Button type="submit">{displayName}</Button>
+          <Button type="button">
+            <a href="/auth/google">{displayName} WITH GOOGLE</a>
+          </Button>
+        </ButtonContainer>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
-      <a href="/auth/google">{displayName} with Google</a>
     </div>
   )
 }
@@ -44,7 +49,7 @@ const AuthForm = props => {
 const mapLogin = state => {
   return {
     name: 'login',
-    displayName: 'Login',
+    displayName: 'LOGIN',
     error: state.user.error
   }
 }
@@ -52,7 +57,7 @@ const mapLogin = state => {
 const mapSignup = state => {
   return {
     name: 'signup',
-    displayName: 'Sign Up',
+    displayName: 'SIGN UP',
     error: state.user.error
   }
 }
@@ -81,3 +86,10 @@ AuthForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   error: PropTypes.object
 }
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+`
