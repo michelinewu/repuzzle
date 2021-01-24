@@ -58,7 +58,7 @@ const Hero = styled.div`
 `
 const HeroButton = styled.button`
   font-family: 'Barlow Semi Condensed';
-  font-size: 1.5em;
+  font-size: 1em;
   background-color: #f4f155;
   color: #36008d;
   font-weight: 800;
