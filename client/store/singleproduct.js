@@ -19,9 +19,13 @@ export const setSingleProduct = product => {
  * THUNK CREATORS
  */
 export const fetchSingleProduct = productId => {
+  console.log('fetchSingleProduct thunk')
   return async dispatch => {
+    console.log('try dispatching')
     try {
+      console.log('in try')
       const {data} = await axios.get(`/api/products/${productId}`)
+      console.log('fetchSingleProduct Thunk ', data)
       dispatch(setSingleProduct(data))
     } catch (err) {
       console.log(err)
@@ -32,7 +36,7 @@ export const fetchSingleProduct = productId => {
 /**
  * INITIAL STATE
  */
-const initialState = []
+const initialState = {}
 
 /**
  * ACTION CREATORS

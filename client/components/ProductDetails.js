@@ -3,8 +3,6 @@ import {NavLink} from 'react-router-dom'
 import styled from 'styled-components'
 
 const ProductDetails = props => {
-  console.log('rendering product details')
-
   const {handleClick, product, order} = props
 
   /*

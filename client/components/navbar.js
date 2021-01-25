@@ -138,7 +138,8 @@ const LogoContainer = styled.div`
   padding-left: 20px;
 `
 const Logo = styled.div`
-  background: url('images/logos/logo-repuzzle-white.png') no-repeat;
+  background: url('http://repuzzle.herokuapp.com/images/logos/logo-repuzzle-white.png')
+    no-repeat;
   height: 70px;
   width: 300px;
   padding-left: 20px;
@@ -146,7 +147,8 @@ const Logo = styled.div`
   position: relative;
 
   :hover {
-    background: url('images/logos/logo-repuzzle-yellow.png') no-repeat;
+    background: url('http://repuzzle.herokuapp.com/images/logos/logo-repuzzle-yellow.png')
+      no-repeat;
     background-size: 300px 70px;
   }
 `
@@ -162,14 +164,16 @@ const NavItems = styled.div`
   width: 500px;
 `
 const ShoppingCartImg = styled.div`
-  background: url('images/shopping-cart/shopping-cart-white.png') no-repeat;
+  background: url('http://repuzzle.herokuapp.com/images/shopping-cart/shopping-cart-white.png')
+    no-repeat;
   width: 70px;
   height: 70px;
   padding-right: 20px;
   background-size: 70px 70px;
 
   :hover {
-    background: url('images/shopping-cart/shopping-cart.png') no-repeat;
+    background: url('http://repuzzle.herokuapp.com/images/shopping-cart/shopping-cart.png')
+      no-repeat;
     background-size: 70px 70px;
   }
 `
