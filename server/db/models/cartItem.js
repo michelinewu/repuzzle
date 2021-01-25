@@ -11,7 +11,7 @@ const CartItem = db.define('cartItem', {
       notEmpty: true
     }
   },
-  historicalPrice: {
+  price: {
     type: Sequelize.INTEGER
   }
 })

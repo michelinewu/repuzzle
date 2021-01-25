@@ -2,12 +2,10 @@ import React, {useState, useEffect} from 'react'
 import {connect} from 'react-redux'
 import {ProductDetails, LoadingPage} from './index'
 import {fetchSingleProduct} from '../store/singleproduct'
-// import {addToCart} from '../store/orders'
+import {addToCart} from '../store/orders'
 import styled from 'styled-components'
 
 const SingleProduct = props => {
-  console.log('singleproduct props ', props)
-
   const {product} = props
 
   const [loading, setLoading] = useState(true)
@@ -45,15 +43,15 @@ const SingleProduct = props => {
 
 const mapState = state => {
   return {
-    product: state.product
-    // order: state.order
+    product: state.product,
+    order: state.order
   }
 }
 const mapDispatch = dispatch => {
   return {
-    fetchSingleProduct: productId => dispatch(fetchSingleProduct(productId))
-    // addProductToCart: (product, orderId) =>
-    //   dispatch(addToCart(product, orderId))
+    fetchSingleProduct: productId => dispatch(fetchSingleProduct(productId)),
+    addProductToCart: (product, orderId) =>
+      dispatch(addToCart(product, orderId))
   }
 }
 export default connect(mapState, mapDispatch)(SingleProduct)

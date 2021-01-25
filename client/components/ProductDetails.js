@@ -32,7 +32,7 @@ const ProductDetails = props => {
       <Title>{product.name}</Title>
       <ProductImage src={product.image} />
       <Price>
-        <b>Price: ${product.resellPrice}</b>
+        <b>Price: ${product.resalePrice}</b>
         <OriginalPercentage>
           ($<Original>{product.origPrice}</Original>,{' '}
           {calcPercentage(product.resellPrice, product.origPrice)}% off)
@@ -98,6 +98,7 @@ const Title = styled.h1`
   border-top: 1px solid #36008d;
   border-bottom: 1px solid #36008d;
   padding: 2px;
+  align-self: center;
 `
 const ProductImage = styled.img`
   width: 100%;

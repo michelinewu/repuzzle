@@ -8,11 +8,6 @@ const GET_PRODUCTS_FROM_SERVER = 'GET_PRODUCTS_FROM_SERVER'
 const REMOVE_PRODUCT_FROM_SERVER = 'REMOVE_PRODUCT_FROM_SERVER'
 
 /**
- * INITIAL STATE
- */
-const initialState = []
-
-/**
  * ACTION CREATORS
  */
 export const getProductsFromServer = products => ({
@@ -49,6 +44,11 @@ export const removeProduct = productId => {
     }
   }
 }
+
+/**
+ * INITIAL STATE
+ */
+const initialState = []
 
 /**
  * REDUCER

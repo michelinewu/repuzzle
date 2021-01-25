@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import {connect} from 'react-redux'
 import {fetchProducts} from '../store/products'
-// import {addToCart} from '../store/orders'
+import {addToCart} from '../store/orders'
 import {ProductDetails, LoadingPage} from './index'
 import styled from 'styled-components'
 
 const AllProducts = props => {
   const {products} = props
+
+  console.log('allproducts props ', props)
 
   const [loading, setLoading] = useState(true)
 
@@ -15,8 +17,8 @@ const AllProducts = props => {
     setLoading(false)
   }, [])
 
-  const handleClick = (product, orderId) => {
-    // addProductToCart(product, orderId)
+  const handleClick = (productObj, orderId) => {
+    props.addProductToCart(productObj, orderId)
   }
 
   return (
@@ -34,7 +36,6 @@ const AllProducts = props => {
                   product={product}
                   order={props.order}
                   handleClick={handleClick}
-                  quantity={props.quantity}
                 />
               ))}
             </Products>
@@ -48,13 +49,14 @@ const AllProducts = props => {
 }
 
 const mapState = state => ({
-  products: state.products
-  // order: state.order
+  products: state.products,
+  order: state.order
 })
 
 const mapDispatch = dispatch => ({
-  getProducts: () => dispatch(fetchProducts())
-  // addProductToCart: (product, orderId) => dispatch(addToCart(product, orderId))
+  getProducts: () => dispatch(fetchProducts()),
+  addProductToCart: (productObj, orderId) =>
+    dispatch(addToCart(productObj, orderId))
 })
 
 export default connect(mapState, mapDispatch)(AllProducts)

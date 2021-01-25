@@ -33,10 +33,10 @@ const Navbar = ({handleClick, isLoggedIn}) => {
               {/* The navbar will show these NavLinks after you log in */}
               <NavLink to="/products">All Products</NavLink>
               <NavLink to="/home">Account Home</NavLink>
-              <a href="#" onClick={handleClick}>
+              <a href="/" onClick={handleClick}>
                 Logout
               </a>
-              <NavLink to="/cart">
+              <NavLink to="/shopping_cart">
                 <ShoppingCartImg />
               </NavLink>
             </NavItems>
@@ -46,7 +46,7 @@ const Navbar = ({handleClick, isLoggedIn}) => {
               <NavItems>
                 <NavLink to="/products">All Products</NavLink>
                 <NavLink to="/login-signup">Login / Sign Up</NavLink>
-                <NavLink to="/cart">
+                <NavLink to="/shopping_cart">
                   <ShoppingCartImg />
                 </NavLink>
               </NavItems>
