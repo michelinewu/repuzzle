@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-
-// import {AllProducts} from './index'
 import {NavLink} from 'react-router-dom'
+import {AllProducts} from './index'
 
 const HomePage = props => {
   const populateText = () => {
@@ -30,13 +29,16 @@ const HomePage = props => {
         </Hero>
       </FullScreenBackground>
       <ReduceReuseRecycle>{populateText()}</ReduceReuseRecycle>
-      {/* <AllProducts /> */}
+      <AllProducts />
     </>
   )
 }
 
 export default HomePage
 
+/*
+*  STYLED-COMPONENTS
+*/
 const FullScreenBackground = styled.div`
   background: url('/images/background-puzzle-cutout.png') no-repeat fixed;
   background-size: 100%;

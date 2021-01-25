@@ -87,6 +87,9 @@ AuthForm.propTypes = {
   error: PropTypes.object
 }
 
+/*
+*  STYLED-COMPONENTS
+*/
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
