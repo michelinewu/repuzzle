@@ -33,10 +33,10 @@ const Navbar = ({handleClick, isLoggedIn}) => {
               {/* The navbar will show these NavLinks after you log in */}
               <NavLink to="/products">All Products</NavLink>
               <NavLink to="/home">Account Home</NavLink>
-              <a href="#" onClick={handleClick}>
+              <a href="/" onClick={handleClick}>
                 Logout
               </a>
-              <NavLink to="/cart">
+              <NavLink to="/shopping_cart">
                 <ShoppingCartImg />
               </NavLink>
             </NavItems>
@@ -46,7 +46,7 @@ const Navbar = ({handleClick, isLoggedIn}) => {
               <NavItems>
                 <NavLink to="/products">All Products</NavLink>
                 <NavLink to="/login-signup">Login / Sign Up</NavLink>
-                <NavLink to="/cart">
+                <NavLink to="/shopping_cart">
                   <ShoppingCartImg />
                 </NavLink>
               </NavItems>
@@ -138,7 +138,8 @@ const LogoContainer = styled.div`
   padding-left: 20px;
 `
 const Logo = styled.div`
-  background: url('images/logos/logo-repuzzle-white.png') no-repeat;
+  background: url('http://repuzzle.herokuapp.com/images/logos/logo-repuzzle-white.png')
+    no-repeat;
   height: 70px;
   width: 300px;
   padding-left: 20px;
@@ -146,7 +147,8 @@ const Logo = styled.div`
   position: relative;
 
   :hover {
-    background: url('images/logos/logo-repuzzle-yellow.png') no-repeat;
+    background: url('http://repuzzle.herokuapp.com/images/logos/logo-repuzzle-yellow.png')
+      no-repeat;
     background-size: 300px 70px;
   }
 `
@@ -162,14 +164,16 @@ const NavItems = styled.div`
   width: 500px;
 `
 const ShoppingCartImg = styled.div`
-  background: url('images/shopping-cart/shopping-cart-white.png') no-repeat;
+  background: url('http://repuzzle.herokuapp.com/images/shopping-cart/shopping-cart-white.png')
+    no-repeat;
   width: 70px;
   height: 70px;
   padding-right: 20px;
   background-size: 70px 70px;
 
   :hover {
-    background: url('images/shopping-cart/shopping-cart.png') no-repeat;
+    background: url('http://repuzzle.herokuapp.com/images/shopping-cart/shopping-cart.png')
+      no-repeat;
     background-size: 70px 70px;
   }
 `

@@ -17,7 +17,7 @@ const Product = db.define('product', {
       min: 0
     }
   },
-  resellPrice: {
+  resalePrice: {
     type: Sequelize.INTEGER,
     allowNull: false,
     validate: {
